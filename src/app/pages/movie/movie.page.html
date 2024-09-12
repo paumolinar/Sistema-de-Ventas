@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Comprar entrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input
+          type="text"
+          required
+          [(ngModel)]="name"
+          name="name"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input
+          type="text"
+          required
+          [(ngModel)]="lastName"
+          name="lastName"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Edad</ion-label>
+        <ion-input
+          type="number"
+          required
+          [(ngModel)]="age"
+          name="age"
+        ></ion-input>
+      </ion-item>
+
+      <ion-select
+        name="ticketType"
+        [(ngModel)]="ticketType"
+        placeholder="Tipo de entrada"
+      >
+        <ion-select-option value="2D">2D - $4.600</ion-select-option>
+        <ion-select-option value="3D">3D - $5.300</ion-select-option>
+        <ion-select-option value="4DX">4DX - $6.200</ion-select-option>
+      </ion-select>
+
+      <ion-item>
+        <ion-button expand="block" (click)="comprarEntrada()"
+          >Comprar</ion-button
+        >
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Sucursal San Joaquín</ion-title>
+  </ion-toolbar>
+</ion-footer>
